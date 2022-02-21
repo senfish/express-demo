@@ -12,4 +12,11 @@ npm start
 // or
 nodemon index.js
 ```
+## 查看commit记录可看到完整的实现过程
+
+## 实现路由中间件
+
+```js
+nodemon router-mid-demo.js
+```
 
