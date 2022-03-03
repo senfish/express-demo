@@ -1,23 +1,22 @@
+const Router = require("./router");
 const http = require('http');
-const Router = require('./router');
-
-function application () {
-  this.router = new Router(); // 引用路由系统，为每个app都创建一个路由系统
+function Application () {
+  this.router = new Router()
 }
 
-application.prototype.get = function (path, handler) {
-  this.router.get(path, handler); // 向路由系统的中添加
+Application.prototype.get = function (path, ...handlers) {
+  const route = this.router.route(path);
+  route.get(...handlers);
 }
 
-application.prototype.listen = function (...args) { // app.listen()
+Application.prototype.listen = function (...args) {
   const server = http.createServer((req, res) => {
-    function done () {
-      res.end(`Cannot find ${req.method} ${req.url}`);
+    function done() {
+      res.end(`cannot find ${req.method} ${req.url}`)
     }
-    this.router.handle(req, res, done); // 交给路由系统来处理，如果路径匹配不上，就调用done方法
+    this.router.handle(req, res, done);
   });
-
-  server.listen(...args);
+  server.listen(...args)
 }
 
-module.exports = application;
+module.exports = Application;
