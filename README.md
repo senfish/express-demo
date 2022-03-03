@@ -21,6 +21,6 @@ nodemon router-mid-demo.js
 ```
 express路由图
 
-![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ebe858fd85604bbfa0dba72ac2292d6e~tplv-k3u1fbpfcp-watermark.image?)
 
 
+![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/60d3f5d23da2457783f5d879b41e09e9~tplv-k3u1fbpfcp-watermark.image?)
